@@ -20,7 +20,7 @@ app.use('/', expressGraphQL({
  }));
 
 
-var port = 4000;
+var port = 80;
 
 app.listen(port,() => {
   console.log('Listening on port ' + port);
