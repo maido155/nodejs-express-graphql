@@ -1,0 +1,29 @@
+{
+  "clients": [
+    {
+      "id": "000001",
+      "firstName": "Miguel",
+      "fatherName": "Angel",
+      "secondName": "Diaz",
+      "motherName": "Lopez",
+      "age": 36,
+      "contractId": "C00001"
+    },
+    {
+      "id": "000002",
+      "firstName": "Negas",
+      "fatherName": "Rocha",
+      "motherName": "Montoya",
+      "age": 36,
+      "contractId": "C00001"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "C00001",
+      "status": "aceptado",
+      "createdBy": "01-02-2018",
+      "signedDate": "01-02-2018"
+    }
+  ]
+}
