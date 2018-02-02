@@ -3,19 +3,35 @@
     {
       "id": "000001",
       "firstName": "Miguel",
-      "fatherName": "Angel",
-      "secondName": "Diaz",
+      "fatherName": "Díaz",
+      "secondName": "Angel",
       "motherName": "Lopez",
-      "age": 36,
+      "age": 10,
       "contractId": "C00001"
     },
     {
-      "id": "000002",
-      "firstName": "Negas",
-      "fatherName": "Rocha",
-      "motherName": "Montoya",
-      "age": 36,
-      "contractId": "C00001"
+      "firstName": "Hermione ",
+      "secondName": "",
+      "fatherName": "Granger",
+      "motherName": "",
+      "age": 10,
+      "id": "A~7aaWO"
+    },
+    {
+      "firstName": "Draco ",
+      "secondName": "",
+      "fatherName": "Malfoy",
+      "motherName": "",
+      "age": 34,
+      "id": "NYCbEjG"
+    },
+    {
+      "firstName": "Severus ",
+      "secondName": "",
+      "fatherName": "Snape",
+      "motherName": "",
+      "age": 34,
+      "id": "KzaU4R1"
     }
   ],
   "contracts": [

@@ -176,14 +176,21 @@ const mutation = new GraphQLObjectType ({
     createClient: {
       type: ClientType,
       args: {
-        data: {
-          type: new GraphQLNonNull(ClientInputType),
-        },
+        firstName: { type: GraphQLString },
+        secondName: { type: GraphQLString },
+        fatherName: { type: GraphQLString },
+        motherName: { type: GraphQLString },
+        age: { type: GraphQLInt }
       },
       resolve(parentValue,args){
-        return axios.post(`http://localhost:3000/clients`,args.data)
-          .then(res => res.data);
-        }
+        console.log(args);
+        var axiosPet= axios({
+          method: 'post',
+          url: 'http://localhost:3000/clients',
+          data: args,
+        });
+        return axiosPet.then(res => res.data);
+      }
     },
     //DELETE de empleados
     deleteClient: {
@@ -193,7 +200,10 @@ const mutation = new GraphQLObjectType ({
       },
       resolve(parentValue, { id }){
         return axios.delete(`http://localhost:3000/clients/${id}`)
-          .then(res => res.data);
+          .then(res => res.data)
+          .catch(res =>{
+            console.log(res);
+          } )
       }
     },
     //UPDATE de empleados
