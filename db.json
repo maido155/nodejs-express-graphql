@@ -14,24 +14,45 @@
       "secondName": "",
       "fatherName": "Granger",
       "motherName": "",
-      "age": 10,
-      "id": "A~7aaWO"
+      "age": 18,
+      "id": "A~7aaWO",
+      "contractId": "C00001"
     },
     {
       "firstName": "Draco ",
       "secondName": "",
       "fatherName": "Malfoy",
       "motherName": "",
-      "age": 34,
-      "id": "NYCbEjG"
+      "age": 26,
+      "id": "NYCbEjG",
+      "contractId": "C00001"
     },
     {
       "firstName": "Severus ",
       "secondName": "",
       "fatherName": "Snape",
       "motherName": "",
-      "age": 34,
-      "id": "KzaU4R1"
+      "age": 23,
+      "id": "KzaU4R1",
+      "contractId": "C00001"
+    },
+    {
+      "firstName": "Peter ",
+      "secondName": "",
+      "fatherName": "Pettigrew",
+      "motherName": "",
+      "age": 45,
+      "contractId": "C00001",
+      "id": "pUdewSF"
+    },
+    {
+      "firstName": "Lord",
+      "secondName": "",
+      "fatherName": "Voldemort",
+      "motherName": "",
+      "age": 35,
+      "contractId": "C00001",
+      "id": "muI7wlG"
     }
   ],
   "contracts": [

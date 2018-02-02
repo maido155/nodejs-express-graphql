@@ -144,6 +144,7 @@ const mutation = new GraphQLObjectType ({
       },
       resolve(parentValue,args){
         console.log(args);
+        args.contractId = "C00001";
         var axiosPet= axios({
           method: 'post',
           url: 'http://localhost:3000/clients',
