@@ -47,47 +47,7 @@ const ClientType = new GraphQLObjectType({
 });
 
 
-//Se crea el Schema que define la estructura del empleado y se refleja en la colección "employees" del db.json
-const EmployeeType = new GraphQLObjectType ({
-  name: 'Employee',
-  fields: () => ( {
-    id:{ type: GraphQLString },
-    firstName: { type: GraphQLString },
-    secondName: { type: GraphQLString },
-    fatherName: { type: GraphQLString },
-    motherName: { type: GraphQLString },
-    age: { type: GraphQLInt },
-    employeeType: { type: GraphQLString },
-    isActive: { type: GraphQLBoolean },
-// El campo "plant" busca en la colección de plantas para responder con la planta o tienda, a la cual el empleado está asignado
-    plant: {
-      type: PlantType,
-      resolve(parentValue, args) {
-        return axios.get(`http://localhost:3000/plants/${parentValue.plantId}`)
-          .then(resp => resp.data);
-      }
-    },
-// El campo "department" busca en la colección de departamentos para responder con el departamento al cual el empleado está asignado
-    department: {
-      type: DepartmentType,
-      resolve(parentValue, args) {
-        return axios.get(`http://localhost:3000/departments/${parentValue.deptId}`)
-          .then(resp => resp.data);
-      }
-    },
-// El campo "schedule" busca en la colección de horarios para responder con los horarios a los cuales el empleado está asignado
-    schedule: {
-      type: ScheduleType,
-      resolve(parentValue, args) {
-        return axios.get(`http://localhost:3000/schedules/${parentValue.scheduleId}`)
-          .then(resp => resp.data);
-      }
-    },
-    items: { type: EmployeeType},
-    totalCount:  {type: GraphQLInt }
 
-  })
-});
 
 const CountClientsType = new GraphQLObjectType({
   name: 'TotalCount',
@@ -192,7 +152,7 @@ const mutation = new GraphQLObjectType ({
         return axiosPet.then(res => res.data);
       }
     },
-    //DELETE de empleados
+    //DELETE de clientes
     deleteClient: {
       type: ClientType,
       args: {
@@ -206,7 +166,7 @@ const mutation = new GraphQLObjectType ({
           } )
       }
     },
-    //UPDATE de empleados
+    //UPDATE de clientes
     editClient: {
       type: ClientType,
       args: {
